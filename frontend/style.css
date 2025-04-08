@@ -2,15 +2,13 @@
     --primary: white;
     --secondary: #f32d49;
     --accent: #202121;
-    --primary2: #2E294E;
-    --secondary2: #A4BD5F;
+    --secondary2: #90e0ef;
 }
 
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Fredoka', sans-serif;
-    font-size: 16px;
+    font-family: 'Inter', sans-serif;
 }
 
 html{
@@ -38,6 +36,7 @@ nav{
     flex-direction: column;
     flex: 1;
     border-right: 5px solid var(--accent);
+    position: fixed;
 }
 
 #logo{
@@ -55,6 +54,11 @@ nav{
     height: 100vh;
 }
 
+.active-element{
+    color: var(--secondary2);
+    font-weight: bold;
+}
+
 /* Feed */
 #feed-container {
     display: flex;
@@ -66,12 +70,13 @@ nav{
 }
 
 
-#feed-section{
+.feed-section{
     flex: 5;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 70%;
+    margin-left: 40vh;
 }
 
 .recipe-container{
@@ -79,18 +84,19 @@ nav{
     flex-direction: column;
     background-color: var(--secondary);
     border: 5px solid var(--accent);
-    width: 70%;
+    width: 50%;
 }
 
 .recipe-contents{
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    align-items: center;
+    align-items: left;
+    gap: 10px;
 }
 
 .recipe-contents img{
     width: 100%;
+    height: 60vh;
 }
 
 .owner-tag{
@@ -106,4 +112,50 @@ nav{
     border-radius: 10px;
     margin-bottom: 50px;
     margin-top: 10px;
+    background-color: var(--primary);
+    color: var(--accent);
+    padding: 15px;
 }
+
+.recipe-text{
+    padding: 10px;
+}
+
+.recipe-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.recipe-title span{
+    color: var(--secondary2);
+    font-weight: 500;
+}
+
+.instructions-button{
+    background-color: var(--secondary2);
+    border: 2px solid var(--accent);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--accent);
+}
+
+@media screen and (max-width: 600px) {
+    body {
+      font-size: 10px;
+    }
+    
+    #logo{
+        width: 65px;
+        height: 65px;
+    }
+
+    nav{
+        width: 125px;
+    }
+
+    .feed-section{
+        margin-left: 20vh;
+    }
+  }
