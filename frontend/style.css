@@ -37,6 +37,7 @@ nav{
     align-items: center;
     flex-direction: column;
     flex: 1;
+    border-right: 5px solid var(--accent);
 }
 
 #logo{
@@ -86,6 +87,10 @@ nav{
     flex-direction: column;
     padding: 20px;
     align-items: center;
+}
+
+.recipe-contents img{
+    width: 100%;
 }
 
 .owner-tag{
