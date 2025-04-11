@@ -15,7 +15,7 @@ function checkEmpty($email, $password, $passwordconfirm) {
 function checkUsername($username) {
     $isValid;
 
-    if(!preg_match("/^[a-zA-Z0-9]*$/")){
+    if(!preg_match("/^[a-zA-Z0-9]*$/", $username)){
         $isValid = true;
     }
     else{
@@ -85,18 +85,12 @@ function createUser($conn, $username, $email, $password){
         exit();
     }
 
-    mysqli_stmt_bind_param($stmt, "sss", $username, $password, $email);
+    $hashedpassword = password_hash($password, PASSWORD_DEFAULT);
+
+    mysqli_stmt_bind_param($stmt, "sss", $username, $hashedpassword, $email);
     mysqli_stmt_execute($stmt);
-
-    $data = mysqli_stmt_get_result($stmt);
-
-    if($row = mysqli_fetch_assoc($data)){
-        return $row;
-    }
-    else{
-        $data = false;
-        return $data;
-    }
-
     mysqli_stmt_close($stmt);
+
+    header("location: ../register.php");
+    exit();
 }

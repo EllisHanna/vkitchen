@@ -1,5 +1,9 @@
 <?php
-
+if (function_exists('mysqli_connect')) {
+    echo "✅ mysqli is installed and enabled.";
+} else {
+    echo "❌ mysqli is NOT installed or enabled.";
+}
 ?>
 
 <!DOCTYPE html>

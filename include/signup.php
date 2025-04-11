@@ -4,7 +4,7 @@ if(isset($_POST["submit"])){
     $username = $_POST["username"];
     $email = $_POST["email"];
     $password = $_POST["password"];
-    $passwordconfirm = $_POST["passwordconfirm"];
+    $passwordconfirm = $_POST["confirmpassword"];
 
     require_once 'connect.php';
     require_once 'functions.php';
