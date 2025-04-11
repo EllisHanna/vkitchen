@@ -24,7 +24,7 @@ if(isset($_POST["submit"])){
         exit();
     }
 
-    if(checkPassword($password == $passwordconfirm)){
+    if(checkPassword($password, $passwordconfirm)){
         header("location: ../register.php");
         exit();
     }

@@ -1,9 +1,5 @@
 <?php
-if (function_exists('mysqli_connect')) {
-    echo "✅ mysqli is installed and enabled.";
-} else {
-    echo "❌ mysqli is NOT installed or enabled.";
-}
+
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +21,7 @@ if (function_exists('mysqli_connect')) {
                 <input type="password" placeholder="Password" name="password"><br>
                 <input type="password" placeholder="Confirm Password" name="confirmpassword"><br>
                 <button type="submit" name="submit">Sign Up</button>
-                <p>Already have an account? <a class="link" href="login.html">Sign In</a></p>
+                <p>Already have an account? <a class="link" href="login.php">Sign In</a></p>
             </form>
         </div>
     </div>
