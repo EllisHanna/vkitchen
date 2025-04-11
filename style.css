@@ -21,6 +21,54 @@ a{
     color: var(--primary);
 }
 
+/* Register */
+.lr-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.lr-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary);
+    height: 50%;
+    width: 50%;
+    gap: 10px;
+    max-width: 400px;
+}
+
+.lr-box form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+input{
+    border: 5px solid var(--accent);
+    background-color: var(--primary);
+    padding: 5%;
+}
+
+button{
+    background-color: var(--secondary2);
+    border: 2px solid var(--accent);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--accent);
+}
+
+.link{
+    color: var(--secondary2);
+    font-weight: 500;
+}
+
 /* Nav */
 nav{
     background-color: var(--secondary);
@@ -128,15 +176,6 @@ nav{
 .recipe-title span{
     color: var(--secondary2);
     font-weight: 500;
-}
-
-.instructions-button{
-    background-color: var(--secondary2);
-    border: 2px solid var(--accent);
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    color: var(--accent);
 }
 
 /* Responsiveness */
