@@ -43,6 +43,7 @@ a{
     gap: 10px;
     min-width: 250px;
     max-width: 400px;
+    min-height: 400px;
 }
 
 .lr-box form{
@@ -50,7 +51,7 @@ a{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 input{
@@ -227,4 +228,24 @@ nav{
     .search-bar{
         width: 40%;
     }
+
+    .recipe-box{
+        padding: 25px;
+    }
+}
+
+/* Add Recipe */
+.description-box{
+    height: 125px;
+}
+
+.recipe-box{
+    padding: 50px;
+    display: flex;
+    gap: 20px;
+}
+
+#recipe-form{
+    display: flex;
+    gap: 20px;
 }

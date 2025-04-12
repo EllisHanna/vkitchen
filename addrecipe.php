@@ -11,15 +11,27 @@
     <nav>
         <img src="./images/logo.png" id="logo">
         <ul id="nav-list">
-            <li class="nav-element"><a href="home.html">Home</a></li>
-            <li class="nav-element"><a href="myrecipes.html">My Recipes</a></li>
-            <li class="nav-element"><a href="addrecipe.html">Add Recipe</a></li>
+            <li class="nav-element"><a href="home.php">Home</a></li>
+            <li class="nav-element"><a href="myrecipes.php">My Recipes</a></li>
+            <li class="nav-element"><a class="active-element">Add Recipe</a></li>
             <li class="nav-element"><a href="#">Log Out</a></li>
         </ul>
     </nav>
 
     <section class="feed-section">
-        <div></div>
+        <div class="lr-container">
+            <div class="lr-box recipe-box">
+                <h1>Add A Recipe</h1>
+                <form method="post" id="recipe-form">
+                    <input type="text" placeholder="Recipe Name">
+                    <input class="description-box" type="text" placeholder="Description">
+                    <?php include 'include/recipetype.php'?>
+                    <input type="number" placeholder="Cooking Time">
+                    <input type="text" placeholder="Ingredients">
+                    <button>Add Recipe</button>
+                </form>
+            </div>
+        </div>
     </section>
 </body>
 </html>

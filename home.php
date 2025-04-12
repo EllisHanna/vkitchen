@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>Nom</title>
 </head>
@@ -12,8 +13,8 @@
         <img src="./images/logo.png" id="logo">
         <ul id="nav-list">
             <li class="nav-element"><a class="active-element">Home</a></li>
-            <li class="nav-element"><a href="myrecipes.html">My Recipes</a></li>
-            <li class="nav-element"><a href="addrecipe.html">Add Recipe</a></li>
+            <li class="nav-element"><a href="myrecipes.php">My Recipes</a></li>
+            <li class="nav-element"><a href="addrecipe.php">Add Recipe</a></li>
             <li class="nav-element"><a href="#">Log Out</a></li>
         </ul>
     </nav>
@@ -21,57 +22,7 @@
     <section class="feed-section">
         <input type="text" placeholder="Search" class="search-bar">
         <div id="feed-container">
-            <div class="recipe-container">
-                <span class="owner-tag">Owner</span>
-                <div class="recipe-contents">
-                    <img src="./images/krapaw.jpg"/>
-                    <div class="recipe-title">
-                        <h1 class="recipe-text">Recipe Name</h1>
-                        <span class="recipe-text">Type</span>
-                    </div>
-                    <p class="recipe-text">Recipe Description Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam eligendi, excepturi perferendis, illum assumenda distinctio eum autem suscipit, reprehenderit doloribus labore aspernatur corrupti velit in impedit reiciendis. Doloremque, dolorum deleniti!</p>
-                    <button class="instructions-button">View Instructions</button>
-                </div>
-            </div>
-
-            <div class="recipe-container">
-                <span class="owner-tag">Owner</span>
-                <div class="recipe-contents">
-                    <img src="./images/krapaw.jpg"/>
-                    <div class="recipe-title">
-                        <h1 class="recipe-text">Recipe Name</h1>
-                        <span class="recipe-text">Type</span>
-                    </div>
-                    <p class="recipe-text">Recipe Description Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam eligendi, excepturi perferendis, illum assumenda distinctio eum autem suscipit, reprehenderit doloribus labore aspernatur corrupti velit in impedit reiciendis. Doloremque, dolorum deleniti!</p>
-                    <button class="instructions-button">View Instructions</button>
-                </div>
-            </div>
-
-            <div class="recipe-container">
-                <span class="owner-tag">Owner</span>
-                <div class="recipe-contents">
-                    <img src="./images/krapaw.jpg"/>
-                    <div class="recipe-title">
-                        <h1 class="recipe-text">Recipe Name</h1>
-                        <span class="recipe-text">Type</span>
-                    </div>
-                    <p class="recipe-text">Recipe Description Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam eligendi, excepturi perferendis, illum assumenda distinctio eum autem suscipit, reprehenderit doloribus labore aspernatur corrupti velit in impedit reiciendis. Doloremque, dolorum deleniti!</p>
-                    <button class="instructions-button">View Instructions</button>
-                </div>
-            </div>
-
-            <div class="recipe-container">
-                <span class="owner-tag">Owner</span>
-                <div class="recipe-contents">
-                    <img src="./images/krapaw.jpg"/>
-                    <div class="recipe-title">
-                        <h1 class="recipe-text">Recipe Name</h1>
-                        <span class="recipe-text">Type</span>
-                    </div>
-                    <p class="recipe-text">Recipe Description Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam eligendi, excepturi perferendis, illum assumenda distinctio eum autem suscipit, reprehenderit doloribus labore aspernatur corrupti velit in impedit reiciendis. Doloremque, dolorum deleniti!</p>
-                    <button class="instructions-button">View Instructions</button>
-                </div>
-            </div>
+        <?php include 'include/recipes.php'; ?>
         </div>
     </section>
 </body>
