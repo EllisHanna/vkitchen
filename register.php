@@ -14,7 +14,7 @@
 <body>
     <div class="lr-container">
         <div class="lr-box">
-            <h1>Sign Up</h1>
+            <h1>Register</h1>
             <form method="post" action="include/signup.php">
                 <input type="username" placeholder="Username" name="username"><br>
                 <input type="email" placeholder="Email" name="email"><br>

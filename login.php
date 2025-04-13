@@ -15,12 +15,12 @@
     <div class="lr-container">
         <div class="lr-box">
             <h1>Login</h1>
-            <form method="post" action="login.php">
+            <form method="post" action="include/signin.php">
                 <input type="email" placeholder="Email" name="email"><br>
                 <input type="password" placeholder="Password" name="password"><br>
                 <input type="password" placeholder="Confirm Password" name="confirmpassword"><br>
-                <button type="submit">Sign Up</button>
-                <p>Dont have an account? <a class="link" href="signup.php">Sign up</a></p>
+                <button type="submit" name="submit">Log In</button>
+                <p>Dont have an account? <a class="link" href="register.php">Sign Up </a></p>
             </form>
         </div>
     </div>

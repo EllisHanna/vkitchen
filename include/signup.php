@@ -10,12 +10,12 @@ if(isset($_POST["submit"])){
     require_once 'functions.php';
 
     if(checkEmpty($email, $password, $passwordconfirm) !== false){
-        header("location: ../register.php");
+        header("location: ../register.php?error=emptyinput");
         exit();
     }
 
     if(checkUsername($username)){
-        header("location: ../register.php");
+        header("location: ../register.php?error=invalidusername");
         exit();
     }
 
@@ -35,8 +35,6 @@ if(isset($_POST["submit"])){
     }
 
     createUser($conn, $username, $email, $password);
-    header("location: ../home.php");
-    exit();
 }
 else{
     header("location: ../register.php");

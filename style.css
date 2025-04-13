@@ -230,17 +230,17 @@ nav{
     }
 
     .recipe-box{
-        padding: 25px;
+        padding: 35px;
     }
 }
 
 /* Add Recipe */
 .description-box{
-    height: 125px;
+    height: 40px;
 }
 
 .recipe-box{
-    padding: 50px;
+    padding: 100px;
     display: flex;
     gap: 20px;
 }

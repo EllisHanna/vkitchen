@@ -27,8 +27,10 @@
                     <input class="description-box" type="text" placeholder="Description">
                     <?php include 'include/recipetype.php'?>
                     <input type="number" placeholder="Cooking Time">
-                    <input type="text" placeholder="Ingredients">
-                    <button>Add Recipe</button>
+                    <input class="description-box" type="text" placeholder="Ingredients">
+                    <input class="description-box" type="text" placeholder="Instructions">
+                    
+                    <button type="submit">Add Recipe</button>
                 </form>
             </div>
         </div>

@@ -91,6 +91,29 @@ function createUser($conn, $username, $email, $password){
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
 
-    header("location: ../register.php");
+    header("location: ../login.php");
     exit();
+}
+
+function loginUser($conn, $email, $password) {
+    $user = userexists($conn, "", $email);
+
+    if ($user === false) {
+        header("location: ../login.php?error=usernotfound");
+        exit();
+    }
+
+    $hashedpassword = $user["password"];
+    $checkpassword = password_verify($password, $hashedpassword);
+
+    if ($checkpassword === false) {
+        header("location: ../login.php?error=wrongpassword");
+        exit();
+    } else {
+        session_start();
+        $_SESSION["userid"] = $user["id"];
+        $_SESSION["username"] = $user["username"];
+        header("location: ../home.php");
+        exit();
+    }
 }
