@@ -25,12 +25,12 @@ if(isset($_POST["submit"])){
     }
 
     if(checkPassword($password, $passwordconfirm)){
-        header("location: ../register.php");
+        header("location: ../register.php?error=passwordsdontmatch");
         exit();
     }
 
     if(userExists($conn, $username, $email)){
-        header("location: ../register.php");
+        header("location: ../register.php?error=userexists");
         exit();
     }
 
