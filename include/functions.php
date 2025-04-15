@@ -117,3 +117,15 @@ function loginUser($conn, $email, $password) {
         exit();
     }
 }
+
+function uploadRecipe($conn, $recipename, $description, $recipetype, $cooktime, $ingredients, $instructions, $imagePath, $uid) {
+    $sql = "INSERT INTO recipes(name, description, type, Cookingtime, ingredients, instructions, image, uid) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    $stmt = mysqli_stmt_init($conn);
+
+    mysqli_stmt_bind_param($stmt, "sssisssi", $recipename, $description, $recipetype, $cooktime, $ingredients, $instructions, $imagePath, $uid);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+
+    header("location: ../myrecipes.php?success=recipeadded");
+    exit();
+}

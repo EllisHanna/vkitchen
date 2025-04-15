@@ -249,3 +249,9 @@ nav{
     display: flex;
     gap: 20px;
 }
+
+select{
+    border: 5px solid var(--accent);
+    background-color: var(--primary);
+    padding: 5%;
+}
