@@ -1,9 +1,8 @@
 <?php
 
 require_once 'connect.php';
-require_once 'functions.php';
 
-$sql = "SELECT * FROM recipes";
+$sql = "SELECT * FROM recipes WHERE uid = $_SESSION[userid]";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -12,12 +11,8 @@ if ($result->num_rows > 0) {
         $desc = htmlspecialchars($row['description']);
         $type = htmlspecialchars($row['type']);
         $img = htmlspecialchars($row['image']);
-        $uid = $row['uid'];
-
-        $owner = getOwner($conn, $uid);
 
         echo "<div class='recipe-container'>
-                <span class='owner-tag'>$owner</span>
                 <div class='recipe-contents'>
                     <img src='./images/$img'/>
                     <div class='recipe-title'>
@@ -25,7 +20,7 @@ if ($result->num_rows > 0) {
                         <span class='recipe-text'>$type</span>
                     </div>
                     <p class='recipe-text'>$desc</p>
-                    <button class='instructions-button'>View Instructions</button>
+                    <button class='instructions-button'>Edit Recipe</button>
                 </div>
               </div>";
     }

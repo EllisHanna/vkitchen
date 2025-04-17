@@ -1,3 +1,12 @@
+<?php
+session_start();
+if(isset($_SESSION['userid']));
+else{
+    header("location: ../home.php?error=notloggedin");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
