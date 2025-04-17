@@ -109,23 +109,45 @@ function loginUser($conn, $email, $password) {
     if ($checkpassword === false) {
         header("location: ../login.php?error=wrongpassword");
         exit();
-    } else {
+    }
+    else {
         session_start();
-        $_SESSION["userid"] = $user["id"];
+        $_SESSION["userid"] = $user["uid"];
         $_SESSION["username"] = $user["username"];
         header("location: ../home.php");
         exit();
     }
 }
 
-function uploadRecipe($conn, $recipename, $description, $recipetype, $cooktime, $ingredients, $instructions, $imagePath, $uid) {
+function uploadRecipe($conn, $recipename, $description, $recipetype, $cooktime, $ingredients, $instructions, $destination, $uid) {
     $sql = "INSERT INTO recipes(name, description, type, Cookingtime, ingredients, instructions, image, uid) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        die("SQL error: " . mysqli_error($conn));
+    }
 
-    mysqli_stmt_bind_param($stmt, "sssisssi", $recipename, $description, $recipetype, $cooktime, $ingredients, $instructions, $imagePath, $uid);
+    mysqli_stmt_bind_param($stmt, "sssisssi", $recipename, $description, $recipetype, $cooktime, $ingredients, $instructions, $destination, $uid);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
 
-    header("location: ../myrecipes.php?success=recipeadded");
+    header("location: ../addrecipe.php?success=recipeadded");
     exit();
+}
+
+function getOwner($conn, $uid){
+    $sql = "SELECT username FROM users WHERE uid = ?";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        die("SQL error: " . mysqli_error($conn));
+    }
+
+    mysqli_stmt_bind_param($stmt, "i", $uid);
+    mysqli_stmt_execute($stmt);
+
+    $result = mysqli_stmt_get_result($stmt);
+    if ($row = mysqli_fetch_assoc($result)) {
+        return $row['username'];
+    }
+
+    mysqli_stmt_close($stmt);
 }

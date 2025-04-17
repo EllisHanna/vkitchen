@@ -1,6 +1,7 @@
 <?php
 
-include 'connect.php';
+require_once 'connect.php';
+require_once 'functions.php';
 
 $sql = "SELECT * FROM recipes";
 $result = $conn->query($sql);
@@ -11,11 +12,14 @@ if ($result->num_rows > 0) {
         $desc = htmlspecialchars($row['description']);
         $type = htmlspecialchars($row['type']);
         $img = htmlspecialchars($row['image']);
+        $uid = $row['uid'];
+
+        $owner = getOwner($conn, $uid);
 
         echo "<div class='recipe-container'>
-                <span class='owner-tag'>Owner</span>
+                <span class='owner-tag'>$owner</span>
                 <div class='recipe-contents'>
-                    <img src='$img'/>
+                    <img src='./images/$img'/>
                     <div class='recipe-title'>
                         <h1 class='recipe-text'>$name</h1>
                         <span class='recipe-text'>$type</span>

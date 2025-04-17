@@ -22,6 +22,7 @@
                 <input type="password" placeholder="Confirm Password" name="confirmpassword"><br>
                 <button type="submit" name="submit">Sign Up</button>
                 <p>Already have an account? <a class="link" href="login.php">Sign In</a></p>
+                <a href="home.php" class="link">Continue As Guest</a>
             </form>
         </div>
     </div>

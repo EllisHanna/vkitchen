@@ -10,7 +10,7 @@ CREATE TABLE `recipes` (
   `rid` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
   `description` varchar(300) DEFAULT NULL,
-  `type` enum('French','Italian','Chinese','Indian','Mexican','Others') NOT NULL,
+  `type` enum('French','Italian','Chinese','Indian','Mexican', 'Thai','Others') NOT NULL,
   `Cookingtime` int(4) ,
   `ingredients` varchar(1000) ,
   `instructions` varchar(1000) ,

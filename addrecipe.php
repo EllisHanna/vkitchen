@@ -22,15 +22,15 @@
         <div class="lr-container">
             <div class="lr-box recipe-box">
                 <h1>Add A Recipe</h1>
-                <form method="post" id="recipe-form" action="submitrecipe.php">
-                    <input type="text" placeholder="Recipe Name">
-                    <input class="description-box" type="text" placeholder="Description">
+                <form method="post" id="recipe-form" action="include/submitrecipe.php" enctype="multipart/form-data">
+                    <input type="text" placeholder="Recipe Name" name="recipename">
+                    <input class="description-box" type="text" placeholder="Description" name="description">
                     <?php include 'include/recipetype.php'?>
-                    <input type="number" placeholder="Cooking Time">
-                    <input class="description-box" type="text" placeholder="Ingredients">
-                    <input class="description-box" type="text" placeholder="Instructions">
-                    <input type="file" placeholder="Upload An Image">
-                    <button type="submit">Add Recipe</button>
+                    <input type="number" placeholder="Cooking Time" name="cooktime">
+                    <input class="description-box" type="text" placeholder="Ingredients" name="ingredients">
+                    <input class="description-box" type="text" placeholder="Instructions" name="instructions">
+                    <input type="file" placeholder="Upload An Image" name="image">
+                    <button type="submit" name="submit">Add Recipe</button>
                 </form>
             </div>
         </div>
