@@ -2,7 +2,7 @@
 session_start();
 if(isset($_SESSION['userid']));
 else{
-    header("location: ../home.php?error=notloggedin");
+    header("location: ./home.php?error=notloggedin");
     exit();
 }
 ?>
