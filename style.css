@@ -28,6 +28,7 @@ a{
     align-items: center;
     height: 100vh;
     overflow: visible;
+    width: 100%;
 }
 
 .lr-box{
@@ -35,7 +36,7 @@ a{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--secondary);
+    background-color: var(--primary);
     border: 5px solid var(--accent);
     border-radius: 20px;
     height: 50%;
@@ -44,6 +45,11 @@ a{
     min-width: 250px;
     max-width: 400px;
     min-height: 400px;
+    padding: 15px;
+}
+
+.lr-input{
+    max-width: 300px;
 }
 
 .lr-box form{
@@ -52,6 +58,7 @@ a{
     align-items: center;
     justify-content: center;
     gap: 5px;
+    width: 100%;
 }
 
 input{
@@ -63,7 +70,7 @@ input{
     min-height: 40px;
     max-height: 40px;
     min-width: 100px;
-    max-width: 220px;
+    max-width: 400px;   
     border-radius: 4px;
 }
 
@@ -171,7 +178,7 @@ nav{
 }
 
 .search-bar{
-    width: 70%;
+    width: 100%;
     height: 5%;
     border: 5px solid var(--accent);
     border-radius: 10px;
@@ -223,14 +230,12 @@ select{
     width: 100%;
     padding: 5px;
     min-height: 40px;
-    max-height: 40px;
     min-width: 100px;
-    max-width: 220px;
+    max-width: 400px;
     border-radius: 4px;
 }
 
 .recipe-box{
-    padding: 35px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -242,7 +247,7 @@ select{
     width: 100%;
     gap: 10px;
     min-width: 250px;
-    max-width: 400px;
+    max-width: 700px;
     min-height: 400px;
 }
 
@@ -256,4 +261,5 @@ select{
     align-items: center;
     justify-content: center;
     gap: 5px;
+    width: 100%;
 }

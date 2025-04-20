@@ -17,10 +17,10 @@
         <div class="lr-box">
             <h1>Register</h1>
             <form method="post" action="include/signup.php">
-                <input type="username" placeholder="Username" name="username"><br>
-                <input type="email" placeholder="Email" name="email"><br>
-                <input type="password" placeholder="Password" name="password"><br>
-                <input type="password" placeholder="Confirm Password" name="confirmpassword"><br>
+                <input class="lr-input" type="username" placeholder="Username" name="username"><br>
+                <input class="lr-input" type="email" placeholder="Email" name="email"><br>
+                <input class="lr-input" type="password" placeholder="Password" name="password"><br>
+                <input class="lr-input" type="password" placeholder="Confirm Password" name="confirmpassword"><br>
                 <button type="submit" name="submit">Sign Up</button>
                 <p>Already have an account? <a class="link" href="login.php">Sign In</a></p>
                 <a href="home.php" class="link">Continue As Guest</a>

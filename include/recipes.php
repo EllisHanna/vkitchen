@@ -3,7 +3,14 @@
 require_once 'connect.php';
 require_once 'functions.php';
 
-$sql = "SELECT * FROM recipes";
+$search = isset($_GET['search']) ? $_GET['search'] : '';
+if (!empty($search)) {
+    $sql = "SELECT * FROM recipes WHERE name LIKE '%$search%' OR type LIKE '%$search%'";
+} 
+else {
+    $sql = "SELECT * FROM recipes";
+}
+
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

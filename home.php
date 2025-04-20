@@ -16,7 +16,9 @@ session_start();
     <?php include 'include/navbar.php';?>
 
     <section class="feed-section">
-        <input type="text" placeholder="Search" class="search-bar">
+        <form method="GET" action="home.php">
+            <input type="text" name="search" class="search-bar" placeholder="Search">
+        </form>
         <div id="feed-container">
         <?php include 'include/recipes.php'; ?>
         </div>
