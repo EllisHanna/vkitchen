@@ -25,7 +25,7 @@ if ($result->num_rows > 0) {
                         <span class='recipe-text'>$type</span>
                     </div>
                     <div class='recipe-flex'>
-                        <p class='recipe-text'>$desc</p>
+                        <p class='recipe-text desc'>$desc</p>
                         <button class='instructions-button'>View Instructions</button>
                     </div>
                 </div>

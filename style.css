@@ -1,8 +1,8 @@
 :root{
-    --primary: white;
+    --primary: #faf0e6;
     --secondary: #f32d49;
     --accent: #202121;
-    --secondary2: #90e0ef;
+    --primary2: white;
 }
 
 *{
@@ -12,13 +12,13 @@
 }
 
 html{
-    background-color: var(--primary);
+    background-color: var(--primary2);
     color: var(--accent);
 }
 
 a{
     text-decoration: none;
-    color: var(--primary);
+    color: var(--accent);
 }
 
 /* Register */
@@ -36,7 +36,7 @@ a{
     align-items: center;
     justify-content: center;
     background-color: var(--secondary);
-    border: 10px solid var(--accent);
+    border: 5px solid var(--accent);
     border-radius: 20px;
     height: 50%;
     width: 50%;
@@ -55,9 +55,16 @@ a{
 }
 
 input{
-    border: 5px solid var(--accent);
-    background-color: var(--primary);
-    padding: 5%;
+    border: 3px solid var(--accent);
+    background-color: var(--primary2);
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    min-height: 40px;
+    max-height: 40px;
+    min-width: 100px;
+    max-width: 220px;
+    border-radius: 4px;
 }
 
 button{
@@ -76,8 +83,8 @@ button{
 
 /* Nav */
 nav{
-    background-color: var(--secondary);
-    color: var(--primary);
+    background-color: var(--primary);
+    color: var(--accent);
     width: 250px;
     height: 100vh;
     display: flex;
@@ -104,7 +111,7 @@ nav{
 }
 
 .active-element{
-    color: var(--secondary2);
+    color: var(--secondary);
     font-weight: bold;
 }
 
@@ -148,6 +155,8 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 .recipe-contents img{
@@ -164,7 +173,7 @@ nav{
 .search-bar{
     width: 70%;
     height: 5%;
-    border: 5px solid var(--secondary);
+    border: 5px solid var(--accent);
     border-radius: 10px;
     margin-bottom: 50px;
     margin-top: 10px;
@@ -175,7 +184,15 @@ nav{
 
 .recipe-text{
     padding: 10px;
+    height: 100%;
 }
+
+.desc {
+    height: 100px;
+    width: 80%;
+    overflow-wrap: break-word;
+}
+
 
 .recipe-title{
     display: flex;
@@ -189,66 +206,9 @@ nav{
     font-weight: 500;
 }
 
-/* Responsiveness */
-@media screen and (max-width: 750px) {
-    body {
-      font-size: 12px;
-    }
-    
-    #logo{
-        width: 65px;
-        height: 65px;
-    }
-
-    nav{
-        width: 125px;
-    }
-
-    .feed-section{
-        margin-left: 20vh;
-    }
-
-    .search-bar{
-        width: 40%;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    body {
-      font-size: 10px;
-    }
-    
-    #logo{
-        width: 65px;
-        height: 65px;
-    }
-
-    nav{
-        width: 125px;
-    }
-
-    .feed-section{
-        margin-left: 20vh;
-    }
-
-    .search-bar{
-        width: 40%;
-    }
-
-    .recipe-box{
-        padding: 35px;
-    }
-}
-
 /* Add Recipe */
 .description-box{
     height: 40px;
-}
-
-.recipe-box{
-    padding: 100px;
-    display: flex;
-    gap: 20px;
 }
 
 #recipe-form{
@@ -257,7 +217,43 @@ nav{
 }
 
 select{
-    border: 5px solid var(--accent);
+    border: 3px solid var(--accent);
+    background-color: var(--primary2);
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    min-height: 40px;
+    max-height: 40px;
+    min-width: 100px;
+    max-width: 220px;
+    border-radius: 4px;
+}
+
+.recipe-box{
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: var(--primary);
-    padding: 5%;
+    border: 5px solid var(--accent);
+    border-radius: 20px;
+    height: 80%;
+    width: 100%;
+    gap: 10px;
+    min-width: 250px;
+    max-width: 400px;
+    min-height: 400px;
+}
+
+.recipe-box h1{
+    color: var(--secondary);
+}
+
+.recipe-box form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
