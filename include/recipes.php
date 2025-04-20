@@ -24,8 +24,10 @@ if ($result->num_rows > 0) {
                         <h1 class='recipe-text'>$name</h1>
                         <span class='recipe-text'>$type</span>
                     </div>
-                    <p class='recipe-text'>$desc</p>
-                    <button class='instructions-button'>View Instructions</button>
+                    <div class='recipe-flex'>
+                        <p class='recipe-text'>$desc</p>
+                        <button class='instructions-button'>View Instructions</button>
+                    </div>
                 </div>
               </div>";
     }
