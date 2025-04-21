@@ -17,4 +17,3 @@ foreach ($enum as $value) {
 echo "</select>";
 
 $conn->close();
-?>

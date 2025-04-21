@@ -1,12 +1,6 @@
 <?php
-session_start();
-if(isset($_SESSION['userid']));
-else{
-    header("location: ./home.php?error=notloggedin");
-    exit();
-}
+session_start(); 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +16,9 @@ else{
     <?php include 'include/navbar.php';?>
 
     <section class="feed-section">
-            <?php include 'include/ownrecipes.php' ?>
+        <div id="feed-container" class="instructions">
+                <?php include 'include/instructioninfo.php'; ?>
+        </div>
     </section>
 </body>
 </html>

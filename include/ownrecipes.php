@@ -2,6 +2,7 @@
 
 require_once 'connect.php';
 
+$rid = isset($_GET['recipe']) ? intval($_GET['recipe']) : 0;
 $sql = "SELECT * FROM recipes WHERE uid = $_SESSION[userid]";
 $result = $conn->query($sql);
 
@@ -11,8 +12,9 @@ if ($result->num_rows > 0) {
         $desc = htmlspecialchars($row['description']);
         $type = htmlspecialchars($row['type']);
         $img = htmlspecialchars($row['image']);
+        $rid = $row['rid'];
 
-        echo "<div class='recipe-container'>
+        echo "<div class='recipe-container myrecipes'>
                 <div class='recipe-contents'>
                     <img src='./images/$img'/>
                     <div class='recipe-title'>
@@ -21,7 +23,10 @@ if ($result->num_rows > 0) {
                     </div>
                     <div class='recipe-flex'>
                         <p class='recipe-text desc'>$desc</p>
-                        <button class='instructions-button'>Edit Recipe</button>
+                        <a class='instructions-a' href='editrecipe.php?rid=$rid'>
+                            <button class='instructions-button'>Edit Recipe</button>
+                        </a>
+
                     </div>
                 </div>
               </div>";

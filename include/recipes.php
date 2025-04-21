@@ -20,6 +20,7 @@ if ($result->num_rows > 0) {
         $type = htmlspecialchars($row['type']);
         $img = htmlspecialchars($row['image']);
         $uid = $row['uid'];
+        $rid = $row['rid'];
 
         $owner = getOwner($conn, $uid);
 
@@ -33,7 +34,10 @@ if ($result->num_rows > 0) {
                     </div>
                     <div class='recipe-flex'>
                         <p class='recipe-text desc'>$desc</p>
-                        <button class='instructions-button'>View Instructions</button>
+                        <a class='instructions-a' href='instructions.php?instructions=$rid'>
+                            <button class='instructions-button'>View Instructions</button>
+                        </a>
+
                     </div>
                 </div>
               </div>";
