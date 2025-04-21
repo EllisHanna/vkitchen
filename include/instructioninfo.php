@@ -25,8 +25,8 @@ if ($recipe){
             <h1>$name</h1>
             <img class='instruction-img' src='./images/$img'/>
             <p>Cooking Time: $time minutes</p>
-            <p>$ingredients</p>
-            <p>$instructions</p>
+            <p>Ingredients: $ingredients</p>
+            <p>Instructions: $instructions</p>
             <a class='instructions-a' href='home.php'>
                 <button class='instructions-button'>Back to recipes</button>
             </a>
