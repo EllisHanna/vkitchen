@@ -18,15 +18,8 @@ else{
     <title>Nom</title>
 </head>
 <body>
-    <nav>
-        <img src="./images/logo.png" id="logo">
-        <ul id="nav-list">
-            <li class="nav-element"><a href="home.php">Home</a></li>
-            <li class="nav-element"><a href="myrecipes.php">My Recipes</a></li>
-            <li class="nav-element"><a class="active-element">Add Recipe</a></li>
-            <li class="nav-element"><a href="#">Log Out</a></li>
-        </ul>
-    </nav>
+    
+    <?php include 'include/navbar.php';?>
 
     <section class="feed-section">
         <div class="lr-container">
